@@ -1,10 +1,11 @@
-ARG BUILD_FROM
-FROM ${BUILD_FROM}
+FROM ghcr.io/home-assistant/base:latest
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1
 
+RUN apk add --no-cache python3
+
 WORKDIR /app
 COPY server.py /app/server.py
 
-CMD ["python3", "-u", "/app/server.py"]
+CMD ["/usr/bin/python3", "-u", "/app/server.py"]

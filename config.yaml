@@ -1,5 +1,5 @@
 name: SmartLogger Modbus Simulator
-version: "1.0.0"
+version: "1.0.1"
 slug: smartlogger_modbus_simulator
 description: Simulate the SmartLogger V300R024C10SPC161 Modbus-TCP SCADA profile.
 url: https://github.com/warsiengin/Huawei_Logger_Simulator
