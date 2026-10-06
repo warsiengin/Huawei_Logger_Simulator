@@ -1,0 +1,45 @@
+name: SmartLogger Modbus Simulator
+version: "1.0.0"
+slug: smartlogger_modbus_simulator
+description: Simulate the SmartLogger V300R024C10SPC161 Modbus-TCP SCADA profile.
+url: https://github.com/warsiengin/Huawei_Logger_Simulator
+arch:
+  - amd64
+  - aarch64
+  - armv7
+startup: services
+boot: auto
+host_network: true
+init: false
+options:
+  listen_address: 0.0.0.0
+  port: 502
+  unit_id: 0
+  request_timeout_seconds: 5
+  write_cooldown_seconds: 1
+  active_power_kw: 500
+  reactive_power_kvar: 0
+  input_power_kw: 520
+  power_factor: 0.99
+  daily_energy_kwh: 1250
+  total_energy_kwh: 250000
+  plant_status: 1
+  alarm_info_1: 0
+  alarm_info_2: 0
+  active_power_limit_kw: 1000
+schema:
+  listen_address: str
+  port: port
+  unit_id: int(0,255)
+  request_timeout_seconds: int(1,60)
+  write_cooldown_seconds: int(1,60)
+  active_power_kw: float(0,1000000)
+  reactive_power_kvar: float(-1000000,1000000)
+  input_power_kw: float(0,1000000)
+  power_factor: float(-1,1)
+  daily_energy_kwh: float(0,429496729.5)
+  total_energy_kwh: float(0,429496729.5)
+  plant_status: int(1,5)
+  alarm_info_1: int(0,65535)
+  alarm_info_2: int(0,65535)
+  active_power_limit_kw: float(0,429496729.5)
